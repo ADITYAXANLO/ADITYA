@@ -83,7 +83,7 @@ async def stream(
                             vidid, mystic, video=status, videoid=True
                         )
                     except:
-                    raise AssistantErr(_["play_14"])
+                       raise AssistantErr(_["play_14"])
                 await Anony.join_call(
                     chat_id,
                     original_chat_id,
