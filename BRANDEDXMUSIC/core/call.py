@@ -17,7 +17,7 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from BRANDEDXMUSIC import import LOGGER, YouTube, app, YTB
+from BRANDEDXMUSIC import LOGGER, YouTube, app, YTB
 from BRANDEDXMUSIC.misc import db
 from BRANDEDXMUSIC.utils.database import (
     add_active_chat,
