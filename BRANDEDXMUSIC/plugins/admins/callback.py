@@ -3,7 +3,7 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from BRANDEDXMUSIC import YouTube, app
+from BRANDEDXMUSIC import YouTube, app, YTB
 from BRANDEDXMUSIC.core.call import Anony
 from BRANDEDXMUSIC.misc import SUDOERS, db
 from BRANDEDXMUSIC.utils.database import (
@@ -250,6 +250,14 @@ async def del_back_playlist(client, CallbackQuery, _):
                     mystic,
                     videoid=True,
                     video=status,
+                )
+            except:
+                try:
+                    file_path, direct = await YTB.download(
+                        videoid,
+                        mystic,
+                        videoid=True,
+                        video=status,
                 )
             except:
                 return await mystic.edit_text(_["call_6"])
